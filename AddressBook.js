@@ -93,11 +93,19 @@ class Contact
     }
 }
 
+//UC3 : Create an Address Book Array and Add New Contacts to it.
+let addressBookArray = new Array();
 //Creating object
-let contact1 = new Contact("Bhavani", "Girineni", "Jayanagar", "Bangalore", "Karnataka",500085,8309483421, "girinenibhavani12@gmail.com")
+let contact1 = new Contact("Bhavani", "Girineni", "Jayanagar", "Bangalore", "Karnataka","500085","8309483421", "girinenibhavani12@gmail.com")
+addressBookArray.push(contact1)
+let contact2=new Contact("Laxmi","Gurrala","ShivamRoad",'Hyderabad','Telangana','505134',"7854123233",'laxmi125@gmail.com');
+addressBookArray.push(contact2)
+let contact3=new Contact("Sandhya","Vivaramnenei","Srinagar",'Hyderabad','Telangana','505432',"7857723233",'sandhya34@gmail.com');
+addressBookArray.push(contact3)
+console.log("ADDRESS BOOK ARRAY :");
+addressBookArray.forEach(contact => console.log(contact.toString()));
 
-//calling the object here
-console.log(contact1.toString());
+//checking validation for firstname
 try {
     contact1.firstName = "bha";
     console.log(contact1.firstName);  
