@@ -11,8 +11,7 @@ let addressBookArray = new Array();
 
 //Creating class
 class Contact {
-
-
+    
     //Creating a method constructor 
     constructor(...params) {
         this.firstName = params[0];
@@ -196,7 +195,7 @@ function deleteContact() {
 
 let choice = 0;
 do {
-    console.log("Press: \n1) Add Contact \n2) Edit Contact \n3) View Contact \n4)Delete Contact\n5)Exit:");
+    console.log("Press: \n1) Add Contact \n2) Edit Contact \n3) View Contact \n4)Delete Contact\n5)Number Of Contacts\n6)Exit:");
     choice = Number(prompt("Enter your choice: "));
     if (choice == 1) {
         addContact();
@@ -215,6 +214,9 @@ do {
     if (choice == 4) {
         deleteContact();
     }
-} while (choice != 5);
+    if(choice == 5){
+        console.log("Number of Contacts are: "+addressBookArray.reduce(contact=>contact + 1, 0));
+    }
+} while (choice != 6);
 
 
